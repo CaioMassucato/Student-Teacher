@@ -2,11 +2,11 @@ def get_data():
     '''Get data from file <filename> and appends it to a list'''
     
     # Opens professor skills file and read lines
-    professors_file = open("../professors.txt", "r")
+    professors_file = open("professors.txt", "r")
     professors_lines = professors_file.readlines()
     
     # Opens  file and read lines
-    schools_file = open("../schools.txt", "r")
+    schools_file = open("schools.txt", "r")
     schools_lines = schools_file.readlines()
     
     # Makes a dict with keys = Professors and values = skills
