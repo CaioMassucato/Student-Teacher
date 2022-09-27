@@ -60,6 +60,7 @@ def stable_matching(professors, schools):
         
         if (hired_ammount == vacant):
             min_skills = min(schools[school_id].acquired_skills)
+            
             for candidate in schools[school_id].candidates:
                 if professors[candidate].skills < min_skills:
                     schools[school_id].candidates.remove(candidate)
