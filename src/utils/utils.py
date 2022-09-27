@@ -46,8 +46,10 @@ def get_data():
 
 def print_stable_matchings(schools):
     count = 0
+    print("---------------------------------")
+    print("Stable matchings: ")
     for school in schools.values():
         count += 1
         print(school.id, school.hired)
-    print("----------------------------")
+    print("---------------------------------")
     print("Number of Stable Matchings: ", count)

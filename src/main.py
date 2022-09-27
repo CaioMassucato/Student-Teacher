@@ -42,7 +42,6 @@ def stable_matching(professors, schools):
     for prof_id in professors:
         for school_id in professors[prof_id].desired_schools:
             
-            print(professors[prof_id].desired_schools)
             if professors[prof_id].skills >= min(schools[school_id].desired_skills):
                 schools[school_id].candidates.append(prof_id)
             else:
