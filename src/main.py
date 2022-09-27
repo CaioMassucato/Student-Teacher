@@ -6,17 +6,17 @@ from utils.schools import School
 def hire(school_id, prof_id, professors, schools):
     schools[school_id].hired.append(prof_id)
     schools[school_id].acquired_skills.append(professors[prof_id].skills)
-
     professors[prof_id].hired = 1
     professors[prof_id].hired_by = school_id
     
 # Rejects professors when there's a better match
 def reject(school_id, worst_id, professors, schools):
     prof_id = schools[school_id].hired[worst_id]
+    
     professors[prof_id].hired = 0
     professors[prof_id].hired_by = ""
     professors[prof_id].rejections.append(school_id)
-
+    
     schools[school_id].hired.pop(worst_id)
     schools[school_id].acquired_skills.pop(worst_id)
     schools[school_id].candidates.remove(prof_id)
